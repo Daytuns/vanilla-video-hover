@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iPhone Mockup</title>
+  <style>
+
+    #iphone,
+    #laptop{
+        display: none;
+    }
+
+    .iphone-mockup, .laptop-mockup {
+        z-index: 1000;
+    }
+
+    .main-container{
+        width: 36rem;
+        background-color: #09090b;
+        display: flex;
+        padding: 0;
+        align-items: center; 
+        /* justify-content: center; */
+    }
+
+    .project-list{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .project-iphone{
+        display: flex;
+        align-items: center;
+        border-radius: 10rem;
+        height: 2rem;
+        padding: 1rem;
+        margin: 0;
+        color: white;
+    }
+
+    .project-iphone:hover{
+        background-color: black;
+        box-shadow: inset;
+        transform: scale3d(1.025,1.025,1.025);
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .project-laptop{
+        display: flex;
+        align-items: center;
+        border-radius: 10rem;
+        height: 2rem;
+        padding: 1rem;
+        margin-top: 2rem;
+        color: white;
+    }
+
+    .project-parragraph{
+        font-size: small;
+    }
+
+    .project-laptop:hover{
+        background-color: black;
+        box-shadow: inset;
+        transform: scale3d(1.025,1.025,1.025);
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.3);
+    }
+
+    body{
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        background-color: #09090b;
+        color: #a1a1a1;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+    }
+ 
+    .iphone-mockup {
+      position: fixed;
+      width: 351px;
+      height: 760px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      pointer-events: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      border-radius: 36px;
+    }
+
+    .iphone-mockup .screen {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 36px;
+        overflow: hidden;
+    }
+
+    .iphone-mockup img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 36px;
+    }
+
+    .laptop-mockup {
+      position: fixed;
+      width: 730px;
+      height: 650px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      pointer-events: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      border-radius: 36px;
+      overflow: hidden;
+      border-color: transparent;
+      padding: 0;
+    }
+
+    .laptop-mockup .screen {
+        /* padding: 0.25rem; */
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 36px;
+        border-color: transparent;
+        overflow: hidden; 
+        padding: 0;
+        display: block;
+    }
+
+    .laptop-mockup video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 36px;
+      border-color: transparent;
+    }
+
+    .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .social-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        background-color: #171717; /* neutral-900 */
+        color: #e4e4e7; /* zinc-100 */
+        padding: 4px 10px;
+        font-size: 0.875rem;
+        border-radius: 9999px;
+        margin-top: 2px;
+        text-decoration: none;
+        transition: background-color 0.2s, color 0.2s;
+    }
+
+    .social-button:hover {
+        background-color: #3f3f46; /* zinc-700 */
+        color: white;
+    }
+
+    .icon {
+        height: 12px;
+        width: 12px;
+        margin-left: 4px;
+    }
+
+    .project-parragraph{
+        margin-top: 2rem;
+        line-height: 1.2rem;
+    }
+
+    span{
+        color: #f4ea2c;
+    }
+  </style>
+</head>
+<body>
+  <div id="iphone" class="iphone-mockup">
+    <div class="screen">
+      <img src="vibeHex.jpg" alt="Project screenshot">
+    </div>
+  </div>
+  <div id="laptop" class="laptop-mockup">
+    <div class="screen">
+      <video muted autoplay playsinline src="vibehex-format.mp4" alt="Your browser does not support video.">
+    </div>
+  </div>
+  <div class="main-container">
+    <ul class= "project-list" style="list-style-type: none;">
+        <li class="project-laptop">VibeHex – AI Color Palette Generator</li>
+        <li class="button-group">
+            <a
+                href="https://github.com/Daytuns"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-button"
+            >
+                GitHub
+                <svg
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon"
+                >
+                <path
+                    d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z"
+                    fill="currentColor"
+                />
+                </svg>
+            </a>
+
+            <a
+                href="https://daytuns.github.io/vibehex-frontend-live/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-button"
+            >
+                Live
+                <svg
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon"
+                >
+                <path
+                    d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z"
+                    fill="currentColor"
+                />
+                </svg>
+            </a>
+        </li>
+        <li class="project-parragraph">
+            A lightweight web app that generates color palettes from natural language prompts. 
+            Users type in a vibe or theme and get a 5-color palette powered by Gemini Flash 2.0. 
+            The app uses a <span>Node.js backend</span> to handle <span>API calls</span>, a <span>vanilla JavaScript frontend</span>, a <span>Three.js</span> loader animation, and it lets users copy to clipboard on color click. 
+            It also includes a custom contrast algorithm for accessibility. The UI was designed in <span>figma</span>, and it is optimized for mobile.
+        </li>
+        <li class="project-laptop">Web Development Services for Spring Counseling</li>
+        <li class="project-laptop">Web Development Services for COINDISA</li>
+        <li class="project-iphone">All Alarms off React Native App</li>
+  </div>
+
+  <script>
+    const iphoneMockup = document.getElementById('iphone');
+    const laptopMockup = document.getElementById('laptop')
+    const iphone_screen = iphoneMockup.querySelector('.screen img');
+    const laptop_screen = laptopMockup.querySelector('.screen img');
+
+    // Loop over all .project elements
+    document.querySelectorAll(".project-iphone").forEach(project => {
+    project.addEventListener('mouseenter', () => {
+        iphoneMockup.style.display = 'block'; // Show the mockup
+        document.addEventListener('mousemove', handleMouseMoveiPhone);
+    });
+        project.addEventListener('mouseleave', () => {
+            iphoneMockup.style.display = 'none'; // Hide the mockup
+            document.removeEventListener('mousemove', handleMouseMoveiPhone);
+        });
+    });
+
+    document.querySelectorAll(".project-laptop").forEach(project => {
+    project.addEventListener('mouseenter', () => {
+        laptopMockup.style.display = 'block'; // Show the mockup
+        document.addEventListener('mousemove', handleMouseMovelaptop);
+
+        const video = laptopMockup.querySelector('video');
+        video.pause();           // Stop the current playback
+        video.currentTime = 0;   // Rewind to start
+        video.play();            // Play it again
+    });
+        project.addEventListener('mouseleave', () => {
+            laptopMockup.style.display = 'none'; // Hide the mockup
+            document.removeEventListener('mousemove', handleMouseMovelaptop);
+        });
+    });
+
+    function handleMouseMoveiPhone(e) {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    const mockupWidth = iphoneMockup.offsetWidth;
+    const mockupHeight = iphoneMockup.offsetHeight;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    let left = mouseX + 20;
+    if (left + mockupWidth > windowWidth - 20) {
+        left = mouseX - mockupWidth - 20;
+    }
+
+    let top = mouseY - mockupHeight / 2;
+    if (top < 20) {
+        top = 20;
+    } else if (top + mockupHeight > windowHeight - 20) {
+        top = windowHeight - mockupHeight - 20;
+    }
+
+    iphoneMockup.style.left = `${left}px`;
+    iphoneMockup.style.top = `${top}px`;
+    iphoneMockup.style.transform = 'scale(1)';
+    iphoneMockup.style.opacity = '1';
+}
+
+
+function handleMouseMovelaptop(e) {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    const mockupWidth = laptopMockup.offsetWidth;
+    const mockupHeight = laptopMockup.offsetHeight;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    let left = mouseX + 20;
+    if (left + mockupWidth > windowWidth - 20) {
+        left = mouseX - mockupWidth - 20;
+    }
+
+    let top = mouseY - mockupHeight / 2;
+    if (top < 20) {
+        top = 20;
+    } else if (top + mockupHeight > windowHeight - 20) {
+        top = windowHeight - mockupHeight - 20;
+    }
+
+    laptopMockup.style.left = `${left}px`;
+    laptopMockup.style.top = `${top}px`;
+    laptopMockup.style.transform = 'scale(1)';
+    laptopMockup.style.opacity = '1';
+}
+
+  </script>
+</body>
+</html>
