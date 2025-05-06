@@ -72,17 +72,21 @@
         box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.3);
     }
 
-    body{
-        height: 100vh;
-        width: 100%;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        background-color: #09090b;
-        color: #a1a1a1;
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
+    body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #09090b;
+    color: #a1a1a1;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
     }
+
+
  
     .iphone-mockup {
       position: fixed;
@@ -248,12 +252,13 @@
                 />
                 </svg>
             </a>
+            <p style="font-size: small;">Hover title for demo</p>
         </li>
         <li class="project-parragraph">
             A lightweight web app that generates color palettes from natural language prompts. 
             Users type in a vibe or theme and get a 5-color palette powered by Gemini Flash 2.0. 
             The app uses a <span>Node.js backend</span> to handle <span>API calls</span>, a <span>vanilla JavaScript frontend</span>, a <span>Three.js</span> loader animation, and it lets users copy to clipboard on color click. 
-            It also includes a custom contrast algorithm for accessibility. The UI was designed in <span>figma</span>, and it is optimized for mobile.
+            It also includes a custom contrast algorithm for accessibility. The UI was designed in <span>figma</span>, and it is optimized for mobile (<span>responsive</span>).
         </li>
         <li class="project-laptop">Web Development Services for Spring Counseling</li>
         <li class="project-laptop">Web Development Services for COINDISA</li>
